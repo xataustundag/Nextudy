@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to Nextudy</title>
+	<style>
+		:root { color-scheme: light; --ink: #132238; --muted: #607089; --blue: #4169e1; --gold: #f5b94c; }
+		* { box-sizing: border-box; }
+		body { margin: 0; min-height: 100vh; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: var(--ink); background: #f7faff; }
+		.page { min-height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+		header { display: flex; align-items: center; justify-content: space-between; padding: 28px 7vw; }
+		.logo { font-size: 1.35rem; font-weight: 800; letter-spacing: -.04em; }
+		.logo span { color: var(--blue); }
+		nav a { color: var(--muted); text-decoration: none; margin-left: 28px; font-size: .9rem; }
+		main { flex: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 5vw; max-width: 1200px; width: 86%; margin: 0 auto; padding: 35px 0 70px; }
+		.eyebrow { color: var(--blue); text-transform: uppercase; letter-spacing: .15em; font-size: .72rem; font-weight: 800; }
+		h1 { margin: 18px 0; max-width: 650px; font-size: clamp(3.1rem, 6vw, 5.7rem); line-height: .98; letter-spacing: -.07em; }
+		h1 em { color: var(--blue); font-style: normal; }
+		.intro { max-width: 500px; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+		.actions { display: flex; align-items: center; gap: 22px; margin-top: 30px; }
+		.button { display: inline-block; padding: 15px 25px; border-radius: 12px; color: white; background: var(--blue); text-decoration: none; font-weight: 700; box-shadow: 0 12px 25px #4169e133; }
+		.learn { color: var(--ink); text-decoration: none; font-weight: 700; }
+		.visual { position: relative; min-height: 430px; display: grid; place-items: center; }
+		.orb { width: min(390px, 72vw); aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, #dbe7ff, #edf4ff 62%, #fff); box-shadow: inset -24px -22px 45px #b8ccf555, 0 30px 60px #4169e11c; }
+		.card { position: absolute; width: 235px; padding: 22px; border: 1px solid #ffffffaa; border-radius: 18px; background: #fffffff0; box-shadow: 0 18px 45px #203d781c; }
+		.card.one { top: 18%; left: 3%; transform: rotate(-6deg); }
+		.card.two { right: 0; bottom: 15%; transform: rotate(6deg); }
+		.card small { color: var(--muted); font-weight: 700; }
+		.progress { height: 8px; margin-top: 15px; border-radius: 9px; background: #e7edf8; overflow: hidden; }
+		.progress i { display: block; width: 72%; height: 100%; border-radius: inherit; background: var(--gold); }
+		.spark { color: var(--blue); font-size: 1.8rem; }
+		@media (max-width: 760px) { header { padding: 22px 7%; } nav { display: none; } main { grid-template-columns: 1fr; padding-top: 50px; } .visual { min-height: 350px; } }
+	</style>
+</head>
+<body>
+	<div class="page">
+		<header><div class="logo">next<span>udy</span></div><nav><a href="#features">Features</a><a href="#about">About</a><a href="#login">Log in</a></nav></header>
+		<main>
+			<section>
+				<div class="eyebrow">A better way to learn</div>
+				<h1>Make progress<br>feel <em>possible.</em></h1>
+				<p class="intro">Welcome to Nextudy — a calm, focused space to build better study habits, stay organized, and turn your goals into momentum.</p>
+				<div class="actions"><a class="button" href="#start">Start learning</a><a class="learn" href="#features">See how it works&nbsp; →</a></div>
+			</section>
+			<section class="visual" aria-label="Learning progress preview">
+				<div class="orb"></div>
+				<div class="card one"><div class="spark">✦</div><strong>Your next breakthrough</strong><p><small>Keep showing up. You’re closer than you think.</small></p></div>
+				<div class="card two"><small>Weekly progress</small><h2>72%</h2><div class="progress"><i></i></div></div>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
